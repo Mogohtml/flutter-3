@@ -8,106 +8,100 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Column'),
-            backgroundColor: Colors.red
-        ),
-        body: Center(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => RegisterScreen(),
+        '/login': (context) => LoginScreen(),
+      },
+    );
+  }
+}
+
+class RegisterScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.lightGreenAccent,
+      appBar: AppBar(
+        title: Text('Регистрация'),
+        backgroundColor: Colors.red,
+
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                width: 300,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Center(
-                  child: Text(
-                    'Строка 1',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+            children: <Widget>[
+              TextField(
+                style: TextStyle(color: Colors.black),
+                decoration: InputDecoration(
+                  labelText: 'Имя',
+
+
                 ),
               ),
               SizedBox(height: 10),
-              Container(
-                width: 300,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.green,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Center(
-                  child: Text(
-                    'Строка 2',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 10 ),
-              Container(
-                width: 300,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Center(
-                  child: Text(
-                    'Строка 3',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+              TextField(
+                decoration: InputDecoration(
+                  labelText: 'Email',
                 ),
               ),
               SizedBox(height: 10),
-              Container(
-                width: 300,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.orange,
-                  borderRadius: BorderRadius.circular(15),
+              TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: 'Пароль',
                 ),
-                child: Center(
-                  child: Text(
-                    'Строка 4',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                child: Text('Зарегистрироваться'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class LoginScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.lightGreenAccent,
+      appBar: AppBar(
+        title: Text('Авторизация'),
+        backgroundColor: Colors.red,
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              TextField(
+                decoration: InputDecoration(
+                  labelText: 'Email',
                 ),
               ),
               SizedBox(height: 10),
-              Container(
-                width: 300,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.purple,
-                  borderRadius: BorderRadius.circular(15),
+              TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: 'Пароль',
                 ),
-                child: Center(
-                  child: Text(
-                    'Строка 5',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                child: Text('Войти'),
+                onPressed: () {
+                  // Добавьте здесь логику для авторизации
+                },
               ),
             ],
           ),
