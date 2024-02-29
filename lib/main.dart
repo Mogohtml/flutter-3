@@ -21,7 +21,7 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightGreenAccent,
+      backgroundColor: Colors.green,
       appBar: AppBar(
         title: Text('Регистрация'),
         backgroundColor: Colors.red,
@@ -34,7 +34,7 @@ class RegisterScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextField(
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   labelText: 'Имя',
 
@@ -43,12 +43,14 @@ class RegisterScreen extends StatelessWidget {
               ),
               SizedBox(height: 10),
               TextField(
+                style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   labelText: 'Email',
                 ),
               ),
               SizedBox(height: 10),
               TextField(
+                style: TextStyle(color: Colors.white),
                 obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Пароль',
@@ -73,7 +75,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightGreenAccent,
+      backgroundColor: Colors.green,
       appBar: AppBar(
         title: Text('Авторизация'),
         backgroundColor: Colors.red,
@@ -85,12 +87,15 @@ class LoginScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextField(
-                decoration: InputDecoration(
+                style: TextStyle(color: Colors.white),
+
+          decoration: InputDecoration(
                   labelText: 'Email',
                 ),
               ),
               SizedBox(height: 10),
               TextField(
+                style: TextStyle(color: Colors.white),
                 obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Пароль',
