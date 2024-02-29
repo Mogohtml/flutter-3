@@ -1,16 +1,12 @@
-# untitled48
+# Практическая работа № 3
 
-A new Flutter project.
 
-## Getting Started
+## Скрин Регистрации и Авторизации приложения
 
-This project is a starting point for a Flutter application.
+## Регистрация
 
-A few resources to get you started if this is your first Flutter project:
+<img width="759" alt="Снимок экрана 2024-02-29 в 16 52 52" src="https://github.com/Mogohtml/flutter-3/assets/137728678/26c78f49-97a3-4a70-b419-5a8fe460405e">
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Авторизация
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="767" alt="Снимок экрана 2024-02-29 в 16 54 30" src="https://github.com/Mogohtml/flutter-3/assets/137728678/a88c7f90-1004-4212-a3f3-4e761d75ddfb">
